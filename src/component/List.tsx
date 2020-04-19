@@ -39,8 +39,8 @@ function ListValue(props: ListValueProps): JSX.Element {
   return (
     <>
       {
-        props.contents.map((str) =>
-          <li>{str}</li>
+        props.contents.map((str, index) =>
+          <li key={index}>{str}</li>
         )
       }
     </>
