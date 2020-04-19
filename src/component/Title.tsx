@@ -3,7 +3,7 @@ import React from 'react';
 function Title(): JSX.Element {
   return (
       <header className="App-header">
-        <h1>My first react app</h1>
+        <h1>はよ課題しろ</h1>
       </header>
   )
 }

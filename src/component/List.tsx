@@ -8,12 +8,20 @@ interface ListValueProps{
   contents: Array<string>
 }
 
+const addValueList: string[] = ["ボケ", "カス", "さっさとやれ", "進捗どうですか"]
+
+function getRandom(maxInt: number): number {
+  return Math.floor(Math.random() * Math.floor(maxInt))
+}
+
 function Content(): JSX.Element {
-  const [state, setState] = React.useState<ListState>({contents: ["はよ", "課題", "やれ"]});
+  const [state, setState] = React.useState<ListState>({contents: []});
 
   function buttonPushEvent(){
-    const updatedValue = state.contents
-    updatedValue.push("ボケ")
+    const updatedValue: string[] = state.contents
+    const valueCount: number = addValueList.length
+    const newValue: string = addValueList[getRandom(valueCount)]
+    updatedValue.push(newValue)
     setState({contents: updatedValue})
   }
 
