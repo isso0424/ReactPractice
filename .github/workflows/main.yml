@@ -33,5 +33,6 @@ jobs:
       run: |
         echo Add other actions to build,
         echo test, and deploy your project.
+        yarn add eslint
     - name: ESLint (JS/TS) Action 
       uses: iCrawl/action-eslint@v1
